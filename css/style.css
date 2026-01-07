@@ -147,11 +147,8 @@
 .sticky .header {
   position: fixed;
   top: 0;
-  bottom: 0;
   width: 100%;
   height: 8rem;
-  padding-top: 0;
-  padding-bottom: 0;
   background-color: rgba(255, 255, 255, 0.97);
   z-index: 9999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
@@ -223,6 +220,61 @@
   color: #f5f5f5;
   padding: 1.2rem 3.6rem;
   transition: all 0.3s ease;
+}
+
+/**************************/
+/* ARTICLE SECTION */
+/**************************/
+
+.editorial-destination {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4.8rem;
+  align-items: start;
+
+  padding: 10rem 6.4rem;
+  background: #f4f4f2;
+}
+
+.editorial-text {
+  max-width: 420px;
+}
+
+.editorial-title {
+  font-family: "Playfair Display", serif;
+  font-size: 5.6rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 2.4rem;
+}
+
+.editorial-desc {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 3.2rem;
+}
+
+.editorial-link {
+  font-size: 1.4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+  border-bottom: 1px solid #111;
+  padding-bottom: 0.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.editorial-image {
+  position: relative;
+}
+
+.editorial-image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
 }
 
 /**************************/
