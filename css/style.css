@@ -2,21 +2,68 @@
 /* HEADER */
 /**************************/
 
+/* Button Back */
+/* .btn-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.btn-back ion-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.btn-back:hover ion-icon {
+  transform: translateX(-4px);
+} */
 .header {
+  position: absolute; /* KEY FIX */
+  top: 0;
+  left: 0;
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fdf2e9;
 
-  /* Because we want header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
-  position: absolute;
-  /* z-index: 1000; */
+
+  background: transparent;
+  z-index: 1000;
 }
 
-.logo {
-  height: 7rem;
+.header-logo img {
+  height: 6rem; /* adjust if needed */
+  width: auto;
+  display: block;
+}
+
+.header,
+.header a,
+.btn-back ion-icon {
+  color: #fff;
+}
+
+/* .header {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.25);
+} */
+
+.nav-open .header {
+  background: #fff;
+}
+
+.nav-open .main-nav-link,
+.nav-open .btn-back ion-icon {
+  color: #fff;
 }
 
 /**************************/
@@ -62,6 +109,14 @@
   background-color: #cf711f;
 }
 
+.main-nav-link {
+  color: #fff;
+}
+
+.main-nav-link:hover {
+  opacity: 0.8;
+}
+
 /* MOBILE */
 .btn-mobile-nav {
   border: none;
@@ -74,7 +129,7 @@
 .icon-mobile-nav {
   height: 4.8rem;
   width: 4.8rem;
-  color: #333;
+  color: #fff;
 }
 
 .icon-mobile-nav[name="close-outline"] {
@@ -112,7 +167,7 @@
 
 .section-hero {
   background: url("/img/hero_background.png");
-  height: 92vh; /* Makes it full-screen */
+  height: 100vh; /* Makes it full-screen */
   display: flex;
 }
 
@@ -171,102 +226,12 @@
 }
 
 /**************************/
-/* DESTINATIONS SECTION */
-/**************************/
-
-.section-destinations {
-  padding: 8rem 0 10rem;
-  background-color: #fff;
-}
-
-.destinations-header {
-  padding: 8rem;
-  margin-bottom: 4rem;
-}
-
-.destinations-header h2 {
-  font-size: 3.2rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-}
-
-/* SWIPER */
-
-.destinations-swiper {
-  padding-left: 8rem;
-}
-
-.destinations-swiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-}
-
-.destination-card {
-  width: 28rem;
-  height: 38rem;
-  border-radius: 2.4rem;
-  overflow: hidden;
-  display: block;
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease;
-}
-
-.destination-card:hover {
-  transform: translateY(-6px);
-}
-
-.destination-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* GLASS OVERLAY */
-.card-overlay {
-  position: absolute;
-  bottom: 1.6rem;
-  left: 1.6rem;
-  right: 1.6rem;
-
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
-  color: #fff;
-  padding: 1.6rem;
-  border-radius: 1.6rem;
-  pointer-events: none;
-}
-
-.card-overlay .location {
-  font-size: 1.2rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.8;
-}
-
-.card-overlay h3 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin: 0.4rem 0;
-}
-
-.card-overlay p {
-  font-size: 1.3rem;
-  line-height: 1.4;
-  opacity: 0.85;
-}
-
-/**************************/
 /* QUOTES SECTION */
 /**************************/
 
 .section-quotes {
   background-color: #333;
-  height: 80vh;
+  height: 40vh;
   width: 100%;
   display: flex;
   flex-direction: column;

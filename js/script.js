@@ -44,24 +44,6 @@ allLinks.forEach(function (link) {
   });
 });
 
-const swiper = new Swiper(".destinations-swiper", {
-  slidesPerView: "auto",
-  spaceBetween: 24,
-  grabCursor: true,
-  freeMode: true,
-  speed: 600,
-
-  preventClicks: false,
-  preventClicksPropagation: false,
-});
-
-new Swiper(".destinations-swiper", {
-  slidesPerView: "auto",
-  spaceBetween: 24,
-  slidesOffsetBefore: 50,
-  slidesOffsetAfter: 50,
-});
-
 const testimonialswiper = new Swiper(".testimonial-swiper", {
   loop: true,
   slidesPerView: 1,
